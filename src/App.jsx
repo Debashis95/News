@@ -29,11 +29,12 @@ function App() {
     <ToastContainer/>
      <Router>
       <Routes>
+            <Route path='/register' element={<Register/>}/>
+        <Route path='/login' element={<Login/>}/>
         {showFirstComponent && 
         <Route path='/' element={<First onSignUp={handleSignUp}/>}/>}
         <Route path='/first' element={<First/>}/>
-        <Route path='/register' element={<Register/>}/>
-        <Route path='/login' element={<Login/>}/>
+    
         <Route path='/dashboard' element={<PrivateRoute Component={Dashboard}/>}/>
         <Route path='/switchinterest' element={<PrivateRoute Component={SwitchInterest}/>}/>
         <Route path='/mycollection' element={<PrivateRoute Component={MyCollection}/>}/>
